@@ -1,3 +1,4 @@
+import os
 from fastapi import Body, FastAPI, Request, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
@@ -5,7 +6,7 @@ import openai
 from pydantic import BaseModel, ValidationError
 
 
-API_KEY=
+API_KEY: str = os.getenv('API_KEY')
 
 app = FastAPI()
 
